@@ -1,0 +1,12 @@
+.nameLabel {
+    -fx-font-size: 20px;
+}
+.sidebar {
+    -fx-background-color: rgba(255,255,255,0.25);
+}
+.sidebar:hover {
+    -fx-background-color: rgba(255,255,255,0.35);
+}
+.sidebar:pressed {
+    -fx-background-color: rgba(180,180,180,0.35);
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exemplo.demo3.AppController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox prefHeight="720.0" prefWidth="371.0" styleClass="back-panel" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="67.0" prefWidth="371.0">
+                     <children>
+                        <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="sidebar" text="Personagem" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="554.0" prefWidth="331.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fx:id="fullBodyImg" fitHeight="384.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@masc.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="133.0" prefWidth="331.0" spacing="10.0" styleClass="sidebar">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label text="Nível " textFill="#0e8f68">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="characterLevel" text="0" textFill="#0e8f68">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <ProgressBar maxWidth="-Infinity" prefHeight="15.0" prefWidth="286.0" progress="0.31" styleClass="xp-bar" fx:id="xpBar" />
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label text="XP: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="0" textFill="#0e8f68" fx:id="xpPoints">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+         <center>
+            <HBox prefHeight="680.0" prefWidth="805.0" stylesheets="@../style.css">
+               <children>
+                  <ScrollPane fx:id="scrollPane" prefHeight="680.0" prefWidth="20.0" styleClass="back-panel" stylesheets="@../style.css" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <content>
+                        <GridPane fx:id="gridPane" prefHeight="0.0" prefWidth="827.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                           <padding>
+                              <Insets left="12.0" right="12.0" />
+                           </padding>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin></HBox>
+         </center>
+         <top>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="867.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="botaoAdicionar" alignment="CENTER" mnemonicParsing="false" onAction="#addCharacter" prefWidth="269.0" stylesheets="@../button.css" text="Adicionar Personagem">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="botaoRemover" mnemonicParsing="false" onAction="#deleteCharacter" prefWidth="270.0" stylesheets="@../button.css" text="Remover Personagem">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="botaoEditar" mnemonicParsing="false" onAction="#updateCharacter" prefWidth="269.0" stylesheets="@../button.css" text="Editar Personagem">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="botaoRecarregar" alignment="CENTER" mnemonicParsing="false" onAction="#load" prefHeight="40.0" prefWidth="48.0" stylesheets="@../button.css" text="↻">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

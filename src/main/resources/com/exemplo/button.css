@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url(MinecraftRegular-Bmg3.otf);
+}
+.button {
+    -fx-background-color: rgba(220,220,220,0.75);
+    -fx-background-radius: 0 0 0 0;
+    -fx-font-family: "Minecraft";
+    -fx-font-size: 20px;
+}
+.button:hover {
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-background-radius: 0 0 0 0;
+}
+.button:pressed {
+    -fx-background-color: rgba(180,180,180,0.8);
+    -fx-background-radius: 0 0 0 0;
+}

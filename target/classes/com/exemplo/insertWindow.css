@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url(MinecraftRegular-Bmg3.otf);
+}
+.root {
+    -fx-background-image: url("img/minesky2.jpg");
+    -fx-background-size: cover;
+    -fx-font-family: "Minecraft";
+}

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url(MinecraftRegular-Bmg3.otf);
+}
+.root {
+    -fx-background-image: url("img/wallpaper_minecraft_blur.png");
+    -fx-background-size: cover;
+}
+.label {
+    -fx-font-family: "Minecraft";
+}
+.back-panel {
+    -fx-background-color: rgba(200,200,200,0.5);
+}
+.sidebar {
+    -fx-background-color: rgba(200,200,200,0.75);
+}
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.xp-bar {
+    -fx-accent: rgba(168,230,119,255);
+}
+.xp-bar > .bar {
+    -fx-background-radius: 0;
+    -fx-background-insets: 2px;
+}
+.xp-bar > .track {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 80% , #19241e, #36433c);
+}
