@@ -9,6 +9,8 @@ O STENCIL é uma aplicação Java de gamificação do ensino pensada para uso po
 - Alterar avatar (imagem)
 - Remover aluno
 
+<img width="1278" height="717" alt="image" src="https://github.com/user-attachments/assets/d9e113d2-7544-4eee-9dd4-6902283f6ff1" />
+
 # Executar
 
 Para abrir o STENCIL, o único requisito é instalar o Java 21. Após isso, basta baixar e abrir o .jar disponível em Releases. O executável criará um arquivo .db no diretório em que está para armazenar os dados cadastrados.
